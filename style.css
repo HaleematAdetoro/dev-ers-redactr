@@ -1,0 +1,122 @@
+:root {
+    --primary-font: 'Montserrat', sans-serif;
+    --header-font: 'Permanent Marker', 'Montserrat';
+    --primary-color: #5463EA;
+    --secondary-color: #F7BF68;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --color-grey: #D9D9D9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+    max-width: 700px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+body {
+    font-family: var(--primary-font);
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0px;
+    background-color: var(--primary-color);
+    height: 70px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+header h1 {
+    font-family: var(--header-font);
+    display: inline;
+    color: var(--color-white);
+    text-transform: capitalize;
+}
+
+header .fa-bolt{
+    color: var(--secondary-color);
+    margin: 15px;
+    animation: slide 3s infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(3px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+main h2.title {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+main h3 {
+    color: var(--primary-color);
+    margin: 10px 0 10px 0;
+}
+
+
+form.redacter__form {
+    width: 100%;
+}
+
+section.redacted__output {
+    width: 100%;
+}
+
+form.redacter__form section, section.redacted__output section {
+    margin: 20px 0 20px;
+    display: grid;
+    grid-template-columns: minmax(auto, 120px) 1fr;
+}
+
+form.redacter__form label, section.redacted__output label {
+    font-weight: bold;
+    text-align: right;
+    margin: 0px 10px;
+}
+
+.redacter_div label, .scrambler_div label{
+    align-self: center;
+}
+
+form.redacter__form input, form.redacter__form textarea, .redacted_text textarea {
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: none;
+    background-color: var(--color-grey);
+}
+
+form.redacter__form button, section.redacted__output button {
+    background-color: var(--primary-color);
+    color: var(--color-white);
+    font-size: 12px;
+    max-width: 120px;
+    padding: 8px 2px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 3px 2px 0 2px rgb(41, 52, 148);
+}
+
+form.redacter__form button:active, section.redacted__output button:active {
+    margin: 0px 0px 0px 3px;
+    box-shadow: none;
+}

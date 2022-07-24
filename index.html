@@ -4,14 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Name of chosen challenge</title>
-
+    <title>Readctr - Hide those words</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
-    <h2>I made magic here!!</h2>
+    <header>
+        <i class="fa-solid fa-bolt"></i>
+        <h1>READCTR</h1>
+    </header>
 
+    <main class="container">
+        <h2 class="title">Scramble your social media post messages as fast as light</h2>
+        <form class="redacter__form">
+            <section>
+                <label for="message_box">Text:</label>
+                <textarea id="story" name="message_box" rows="5" cols="30" placeholder="Enter your text here."></textarea>
+
+            </section>
+
+            <section class="redacter_div">
+                <label for="redacter">Redacter: </label>
+                <input type="text" name="redacter" id="Redacter" placeholder="Default: ***">
+            </section>
+
+            <section class="scrambler_div">
+                <label for="scrambler">Scrambler: </label>
+                <input type="text" name="scrambler" id="Scramblers" placeholder="Separate words you want to scramble with spaces e.g shit bad">
+            </section>
+            <section>
+                <div></div>
+                <button>Redact Now</button>
+            </section>
+        </form>
+
+        <section class="redacted__output">
+            <section class="redacted_text">
+                <label for="redacted_text">Output:</label>
+                <textarea id="story" name="redacted_text" rows="5" cols="30" placeholder="Your output will show here."></textarea>
+            </section>
+            <section>
+                <div></div>
+                <button>Copy</button>
+            </section>
+            <section class="more_info">
+                <div></div>
+                <article>
+                    <h3>More info about the scrambled text</h3>
+                    <p>Number of words in the initial message: <span>10</span></p>
+                    <p>Number of scrambled words: <span>2</span></p>
+                    <p>Number of characters in scrambled words: <span>12</span></p>
+                    <p>Total time taken to scramble the words: 0.11 seconds</p>
+                </article>
+            </section>
+        </section>
+    </main>
     <!-- // ============= EEND DO NOT EDIT ============== // -->
     <script src="index.mjs" type="module"></script>
     <!-- // ============= EEND DO NOT EDIT ============== // -->
