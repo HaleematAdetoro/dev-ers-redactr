@@ -94,7 +94,7 @@ form.redacter__form label, section.redacted__output label {
     margin: 0px 10px;
 }
 
-.redacter_div label, .scrambler_div label{
+.redacter_div label, .redacter_div label{
     align-self: center;
 }
 
