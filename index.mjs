@@ -3,9 +3,10 @@
 // document.addEventListener('DOMContentLoaded', startApp); 
 
 let initialMessage = document.getElementById('initial_message')
-let toRedact = document.getElementById('toRedact-id')
+let toRedact = document.getElementById('toRedact-id') 
 let defaultRedacter = "***"
 const button = document.getElementById('redact-btn')
+const copyButton = document.getElementById('copy-btn')
 button.addEventListener("click", isClicked)
 let counter = 0
 
@@ -43,4 +44,12 @@ function isDefaultRedacter(){
     defaultRedacter = redacter.value
     console.log(defaultRedacter)
   }
+}
+
+copyButton.addEventListener("click", copy)
+function copy() {
+  var copyText = document.getElementById("redacted_message");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+  navigator.clipboard.writeText(copyText.value);
 }
