@@ -74,21 +74,21 @@ main h3 {
 }
 
 
-form.redacter__form {
+.redacter__form {
     width: 100%;
 }
 
-section.redacted__output {
+.redacted__output {
     width: 100%;
 }
 
-form.redacter__form section, section.redacted__output section {
+.redacter__form section, .redacted__output section {
     margin: 20px 0 20px;
     display: grid;
     grid-template-columns: minmax(auto, 120px) 1fr;
 }
 
-form.redacter__form label, section.redacted__output label {
+.redacter__form label, .redacted__output label {
     font-weight: bold;
     text-align: right;
     margin: 0px 10px;
@@ -98,25 +98,26 @@ form.redacter__form label, section.redacted__output label {
     align-self: center;
 }
 
-form.redacter__form input, form.redacter__form textarea, .redacted_text textarea {
+.redacter__form input, .redacter__form textarea, .redacted_text textarea {
     padding: 10px 20px;
     border-radius: 12px;
     border: none;
     background-color: var(--color-grey);
 }
 
-form.redacter__form button, section.redacted__output button {
+button {
     background-color: var(--primary-color);
     color: var(--color-white);
     font-size: 12px;
     max-width: 120px;
-    padding: 8px 2px;
+    padding: 8px 10px;
     border-radius: 15px;
     border: none;
     box-shadow: 3px 2px 0 2px rgb(41, 52, 148);
+    
 }
 
-form.redacter__form button:active, section.redacted__output button:active {
+.redacter__form button:active, .redacted__output button:active {
     margin: 0px 0px 0px 3px;
     box-shadow: none;
 }

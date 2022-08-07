@@ -2,21 +2,25 @@ function startApp() {
   let initialMessage = document.getElementById("initial_message");
   let toRedact = document.getElementById("toRedact-id");
   let defaultRedacter = "***";
-  const button = document.getElementById("redact-btn");
+  let defaultRedacterField = document.getElementById("redacter-id")
+  const redactButton = document.getElementById("redact-btn");
+  const clearButton = document.getElementById("clear-btn")
   const copyButton = document.getElementById("copy-btn");
-  button.addEventListener("click", isClicked);
+  
+  redactButton.addEventListener("click", isClicked);
+  clearButton.addEventListener("click", clearValues);
   let counter = 0;
   
   function isClicked() {
-    clearValues()
     if (initialMessage.value == "") {
-      clearValues()
+      alert("Please enter the message to be redacted!")
+      // clearValues()
     } else {
       const startTime = performance.now();
       let messageStrings = initialMessage.value.split(" ");
-      console.log(messageStrings);
+      // console.log(messageStrings);
       let redactList = toRedact.value.toLowerCase().split(" ");
-      console.log(redactList);
+      // console.log(redactList);
       isDefaultRedacter();
       let charCount = 0;
   
@@ -34,18 +38,18 @@ function startApp() {
       document.getElementById("c").innerHTML = charCount;
       const endTime = performance.now();
       document.getElementById("d").innerHTML = endTime - startTime;
-      
+      counter = 0;
     }
   }
   
   function isDefaultRedacter() {
     let redacter = document.getElementById("redacter-id");
     if (redacter.value == "") {
-      console.log(defaultRedacter);
+      // console.log(defaultRedacter);
       return;
     } else {
       defaultRedacter = redacter.value;
-      console.log(defaultRedacter);
+      // console.log(defaultRedacter);
     }
   }
   
@@ -58,6 +62,9 @@ function startApp() {
   }
   
   function clearValues() {
+    initialMessage.value = ""
+    toRedact.value = ""
+    defaultRedacterField.value = ""
     document.getElementById("redacted_message").innerHTML = "";
     document.getElementById("a").innerHTML = 0;
     document.getElementById("b").innerHTML = 0;
