@@ -22,7 +22,7 @@
         <h2 class="title">Redact your social media post messages as fast as light</h2>
         <form class="redacter__form">
             <section>
-                <label for="message_box">Text:</label>
+                <label for="message_box">Message:</label>
                 <textarea id="initial_message" name="message_box" rows="5" cols="30" placeholder="Enter your text here."></textarea>
 
             </section>
@@ -36,9 +36,10 @@
                 <label for="redacter">Words to be redacted: </label>
                 <input type="text" name="redacter" id="toRedact-id" placeholder="Separate words you want to scramble with spaces e.g shit bad">
             </section>
-            <section>
-                <div></div>
+            <section id="redact-section">
+                <!-- <div></div> -->
                 <button id="redact-btn" type="button">Redact Now</button>
+                <button id="clear-btn" type="button" type="reset">Clear</button>
             </section>
         </form>
 
@@ -48,13 +49,12 @@
                 <textarea id="redacted_message" name="redacted_text" rows="5" cols="30" placeholder="Your output will show here."></textarea>
             </section>
             <section>
-                <div></div>
                 <button id="copy-btn">Copy</button>
             </section>
             <section class="more_info">
                 <div></div>
                 <article>
-                    <h3>More info about the redacted text</h3>
+                    <h3>More information about the redacted message</h3>
                     <p>Number of words in the initial message: <b id="a"></b></p>
                     <p>Number of redacted words: <b id="b"></b></p>
                     <p>Number of characters in redacted words: <b id="c"></b></p>
