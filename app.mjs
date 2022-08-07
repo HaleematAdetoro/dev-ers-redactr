@@ -14,15 +14,24 @@ function startApp() {
   function isClicked() {
     if (initialMessage.value == "") {
       alert("Please enter the message to be redacted!")
-      // clearValues()
     } else {
       const startTime = performance.now();
       let messageStrings = initialMessage.value.split(" ");
-      // console.log(messageStrings);
+      console.log(messageStrings);
       let redactList = toRedact.value.toLowerCase().split(" ");
-      // console.log(redactList);
+      console.log(redactList);
       isDefaultRedacter();
       let charCount = 0;
+
+      let x = messageStrings.forEach(element => {  
+        if (element[element.length-1] == "."){
+          let index = messageStrings.indexOf(element)
+          element = element.slice(0,-1)
+          messageStrings[index] = element
+          // console.log(element)
+        }
+        
+      });
   
       for (let i in messageStrings) {
         if (redactList.includes(messageStrings[i].toLowerCase()) == true) {
