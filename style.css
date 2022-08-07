@@ -121,3 +121,13 @@ button {
     margin: 0px 0px 0px 3px;
     box-shadow: none;
 }
+
+#copy-btn, .main_operation_btns {
+    grid-column: 2;
+}
+
+#redact-btn, #clear-btn {
+    width: 100%;
+}
+
+
