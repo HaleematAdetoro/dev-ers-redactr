@@ -20,7 +20,9 @@
     justify-content: center;
     flex-direction: column;
     margin: 10px auto;
-    padding: 10px;
+    padding: 30px;
+   
+   
 }
 
 body {
@@ -66,6 +68,7 @@ header .fa-bolt{
 main h2.title {
     text-align: center;
     color: var(--primary-color);
+    margin-left: 5px;
 }
 
 main h3 {
@@ -90,8 +93,9 @@ main h3 {
 
 .redacter__form label, .redacted__output label {
     font-weight: bold;
-    text-align: right;
+    text-align: left;
     margin: 0px 10px;
+
 }
 
 .redacter_div label, .redacter_div label{
@@ -124,10 +128,16 @@ button {
 
 #copy-btn, .main_operation_btns {
     grid-column: 2;
+    
 }
 
 #redact-btn, #clear-btn {
     width: 100%;
 }
 
+.main_operation_btns {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
 
