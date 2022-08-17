@@ -17,9 +17,9 @@ function startApp() {
     } else {
       const startTime = performance.now();
       let messageStrings = initialMessage.value.split(" ");
-      console.log(messageStrings);
+      //console.log(messageStrings);
       let redactList = toRedact.value.toLowerCase().split(" ");
-      console.log(redactList);
+      //console.log(redactList);
       isDefaultRedacter();
       let charCount = 0;
 
